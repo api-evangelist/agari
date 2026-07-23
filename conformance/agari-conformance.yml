@@ -1,0 +1,29 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: API secured with OAuth 2.0 (docs/oauth-20)
+  - id: oauth2-client-credentials
+    conforms: true
+    evidence: Client Credentials grant used to obtain temporary access_token (docs/oauth-20)
+  - id: rest-json
+    conforms: true
+    evidence: RESTful interface with JSON payloads over HTTPS (docs/requests-and-responses)
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      errors use a custom JSON envelope (version/status/code/error/error_description),
+      not application/problem+json
+  - id: dmarc
+    conforms: true
+    evidence: >-
+      Agari is a founding contributor to the DMARC email-authentication standard;
+      its Brand Protection / DMARC Protection product implements DMARC (RFC 7489)
+  - id: oidc
+    conforms: false
+  - id: fapi
+    conforms: false
+  - id: scim
+    conforms: false

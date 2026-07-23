@@ -1,8 +1,29 @@
 aid: agari
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/agari.png
 name: Agari
-description: 'Agari is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Agari is an email-security provider that pioneered and helped author the DMARC
+  email-authentication standard to protect organizations from phishing, business
+  email compromise (BEC), email spoofing, and brand impersonation. Founded in 2009,
+  Agari was acquired by HelpSystems (now Fortra) in May 2021 and is delivered as
+  Fortra's email-security portfolio, including DMARC Protection / Brand Protection,
+  Phishing Defense, and Phishing Response. The Agari Platform exposes a RESTful JSON
+  API secured with OAuth 2.0 Client Credentials for retrieving security telemetry,
+  auditing users and domains, tracking DMARC policy enforcement, and integrating
+  Agari data into SIEM and SOAR tooling. It was originally backed by Norwest Venture
+  Partners and other venture investors before its acquisition.
 url: https://raw.githubusercontent.com/api-evangelist/agari/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +31,38 @@ x-backed-by:
 - norwest-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-acquired-by: fortra
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-- Unknown
-apis: []
+- Email Security
+- Cybersecurity
+- DMARC
+- Email Authentication
+- Phishing
+- Anti-Phishing
+- Brand Protection
+- API
+- REST
+apis:
+- name: Agari Platform API
+  description: >-
+    RESTful JSON API for the Agari Platform, secured with OAuth 2.0 Client
+    Credentials. Provides access to Agari email-security telemetry — alerts,
+    domain tracking, DMARC policy-enforcement reporting, and user/domain
+    auditing — with standard pagination, sorting, filtering, and searching, for
+    integration into SIEM/SOAR workflows.
+  humanURL: https://developers.agari.com/agari-platform
+  baseURL: https://api.agari.com/v1
+  properties:
+  - type: Documentation
+    url: https://developers.agari.com/agari-platform/docs
+  - type: APIReference
+    url: https://developers.agari.com/agari-platform/reference/overview
+  - type: GettingStarted
+    url: https://developers.agari.com/agari-platform/docs/quick-start
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +71,30 @@ maintainers:
 common:
 - type: Website
   url: https://agari.com
+- type: DeveloperPortal
+  url: https://developers.agari.com/agari-platform
+- type: Documentation
+  url: https://developers.agari.com/agari-platform/docs
+- type: APIReference
+  url: https://developers.agari.com/agari-platform/reference/overview
+- type: GettingStarted
+  url: https://developers.agari.com/agari-platform/docs/quick-start
+- type: Authentication
+  url: authentication/agari-authentication.yml
+- type: Conventions
+  url: conventions/agari-conventions.yml
+- type: ErrorCatalog
+  url: errors/agari-problem-types.yml
+- type: Conformance
+  url: conformance/agari-conformance.yml
+- type: Lifecycle
+  url: lifecycle/agari-lifecycle.yml
+- type: DomainSecurity
+  url: security/agari-domain-security.yml
+- type: LLMsTxt
+  url: llms/agari-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

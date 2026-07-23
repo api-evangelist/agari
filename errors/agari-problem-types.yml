@@ -1,0 +1,44 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs/errors
+docs: https://developers.agari.com/agari-platform/docs/requests-and-responses
+format: custom-json
+rfc9457: false
+envelope:
+  version: integer (always 1)
+  status: string (always "error")
+  code: integer (HTTP status code)
+  error: string (short error name)
+  error_description: string (human-readable message)
+example:
+  version: 1
+  status: error
+  code: 401
+  error: Unauthorized
+  error_description: You are not authorized to make that request.
+problems:
+  - code: 200
+    title: OK
+    class: success
+    description: Standard response for successful HTTP requests.
+  - code: 204
+    title: No Content
+    class: success
+    description: The server successfully processed the request and is not returning any content.
+  - code: 400
+    title: Bad Request
+    class: request-error
+    description: >-
+      The server cannot or will not process the request due to an apparent client
+      error (malformed request syntax, size too large, invalid request message
+      framing, or deceptive request routing).
+  - code: 401
+    title: Unauthorized
+    class: request-error
+    description: The request lacks valid authentication credentials for the target resource.
+  - code: 5xx
+    title: Server Error
+    class: server-error
+    description: >-
+      A 5xx status code indicates a server error; the documentation directs
+      clients to contact support when a 5xx response is encountered.

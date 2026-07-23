@@ -1,0 +1,55 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform/docs/requests-and-responses
+docs:
+  requests: https://developers.agari.com/agari-platform/docs/requests-and-responses
+  pagination: https://developers.agari.com/agari-platform/docs/pagination
+  sorting: https://developers.agari.com/agari-platform/docs/sorting
+  filtering: https://developers.agari.com/agari-platform/docs/filtering
+  searching: https://developers.agari.com/agari-platform/docs/searching
+  errors: https://developers.agari.com/agari-platform/docs/errors
+  fields: https://developers.agari.com/agari-platform/docs/fields
+transport:
+  style: REST
+  payloads: JSON
+  https_required: true
+  methods: [GET, POST, PUT, DELETE]
+authentication:
+  style: oauth2-client-credentials
+  detail: authentication/agari-authentication.yml
+pagination:
+  style: offset-limit
+  params:
+    limit: { default: 25, max: 200, description: max collection items in the response }
+    offset: { default: 0, description: starting index into the collection }
+  next_page: offset = current_offset + current_count
+  end_of_collection: returned item count is less than limit
+  note: reliable paging requires Sorting to be applied to at least one response field
+sorting:
+  supported: true
+  docs: https://developers.agari.com/agari-platform/docs/sorting
+filtering:
+  supported: true
+  docs: https://developers.agari.com/agari-platform/docs/filtering
+searching:
+  supported: true
+  docs: https://developers.agari.com/agari-platform/docs/searching
+error_envelope:
+  format: custom-json
+  rfc9457: false
+  shape:
+    version: integer (always 1)
+    status: string (always "error")
+    code: integer (HTTP status code)
+    error: string (short error name)
+    error_description: string (human-readable message)
+  detail: errors/agari-problem-types.yml
+idempotency:
+  documented: false
+  note: no idempotency-key mechanism is documented for the Agari Platform API
+rate_limiting:
+  documented: false
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: lifecycle/agari-lifecycle.yml

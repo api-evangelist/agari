@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: searched
+source: https://developers.agari.com/agari-platform
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: all API endpoints are served under https://api.agari.com/v1/ (e.g. /v1/ep/token, /v1/ep/users)
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: no public deprecation / Sunset-header policy was located for the Agari Platform API
+sla:
+  url: null
+status_page: null
+notes: >-
+  Agari was acquired by HelpSystems (now Fortra) in May 2021 and is delivered as
+  Fortra's Agari email-security portfolio (DMARC Protection, Phishing Defense,
+  Phishing Response, Brand Protection). The standalone agari.com domain now
+  redirects to emailsecurity.fortra.com; status.agari.com no longer resolves to a
+  dedicated Agari status page.
