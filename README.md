@@ -64,6 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Agari is a company surfaced as a portfolio company of norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+Agari is an email-security provider that pioneered and helped author the DMARC email-authentication standard to protect organizations from phishing, business email compromise (BEC), email spoofing, and brand impersonation. Founded in 2009, Agari was acquired by HelpSystems (now Fortra) in May 2021 and is delivered as Fortra's email-security portfolio, including DMARC Protection / Brand Protection, Phishing Defense, and Phishing Response. The Agari Platform exposes a RESTful JSON API secured with OAuth 2.0 Client Credentials for retrieving security telemetry, auditing users and domains, tracking DMARC policy enforcement, and integrating Agari data into SIEM and SOAR tooling. It was originally backed by Norwest Venture Partners and other venture investors before its acquisition.
 
-Backed by: norwest-venture-partners — https://agari.com
+**Areas:** Company · Email Security · Cybersecurity · DMARC · Email Authentication · Phishing · Anti-Phishing · Brand Protection · REST
+
+## Agari on APIs.io
+
+Everything profiled for Agari is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agari/](https://apis.io/providers/agari/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Agari Platform API](https://apis.io/apis/agari/agari-platform-api/) — RESTful JSON API for the Agari Platform, secured with OAuth 2.0 Client Credentials. Provides access to Agari email-security telemetry — alerts, domain…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Agari Authentication](https://apis.io/security/agari/agari-authentication/)
+- [Agari Domain Security](https://apis.io/security/agari/agari-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://agari.com)
+- [Documentation](https://developers.agari.com/agari-platform/docs)
+- [Getting started](https://developers.agari.com/agari-platform/docs/quick-start)
+- [API reference](https://developers.agari.com/agari-platform/reference/overview)
+- [Blog](https://www.fortra.com/blog)
+
+## API Evangelist rating
+
+**Kin Score 16.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agari/](https://apis.io/providers/agari/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Agari: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agari/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
